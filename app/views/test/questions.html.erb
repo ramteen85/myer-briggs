@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="/test" method="GET">
+        <label>
+            Q<%= @question.number %>: <%= @question.title %>
+        </label>
+        <label>
+            <input type="checkbox" value="<%= @question.qtype[0] %>" name="submission">
+            <%= @question.optionA %>
+        </label>
+        <label>
+            <input type="checkbox" value="<%= @question.qtype[1] %>" name="submission">
+            <%= @question.optionB %>
+        </label>
+        <input type="hidden" name="name" value="<%= @name %>">
+        <input type="hidden" name="gender" value="<%= @gender %>">
+        <input type="hidden" name="progress" value="<%= @question_number + 1 %>">
+        <input type="hidden" name="scoree" value="<%= @score_e %>">
+        <input type="hidden" name="scorei" value="<%= @score_i %>">
+        <input type="hidden" name="scores" value="<%= @score_s %>">
+        <input type="hidden" name="scoren" value="<%= @score_n %>">
+        <input type="hidden" name="scoret" value="<%= @score_t %>">
+        <input type="hidden" name="scoref" value="<%= @score_f %>">
+        <input type="hidden" name="scorej" value="<%= @score_j %>">
+        <input type="hidden" name="scorep" value="<%= @score_p %>">
+        <input type="submit" value="Select Answer">
+    </form>
+</div>

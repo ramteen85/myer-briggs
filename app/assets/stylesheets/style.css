@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 30px;
+    height: auto;
+    position: fixed;
+    top: 0;
+    background: purple;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    margin-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container__heading {
+    max-width: 70%;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__heading h2 {
+    margin-bottom: 15px;
+}
+
+.container__heading p {
+    text-align: left;
+}
+
+.container .form {
+    width: 50%;
+    margin: 0 auto 30px auto;
+}
+
+.container .right img {
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+}
+
+.container label {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn {
+    -webkit-appearance: textfield;
+    font-size: 18px;
+    color: white;
+    background: purple;
+    cursor: pointer;
+    padding: 20px;
+    width: auto;
+    height: auto;
+}
+
+
+
+input[type="checkbox"] {
+    margin-right: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"]
+{
+    margin-left: 20px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+select {
+    width: 52%;
+    font-size: 18px;
+}
