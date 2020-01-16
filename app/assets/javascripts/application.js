@@ -12,5 +12,5 @@
 //
 //= require rails-ujs
 //= require_tree .
-//= require 
+//= require questions.js
  
