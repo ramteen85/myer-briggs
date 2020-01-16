@@ -75,7 +75,8 @@ class TestController < ApplicationController
             end
 
             #get question details
-            @question = Question.find(@question_number)
+            question = Question.where :number => @question_number
+            @question = question[0]
         end
 
         
