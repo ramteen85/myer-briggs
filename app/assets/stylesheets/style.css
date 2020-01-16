@@ -1,32 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Martel', serif;
+}
+
+body {
+    background: rgb(223, 209, 209);
 }
 
 nav {
     padding: 30px;
     height: auto;
-    position: fixed;
+    position: relative;
     top: 0;
-    background: purple;
+    background: rgb(167, 54, 129);
     width: 100%;
 }
 
 h1 {
     text-align: center;
     color: white;
+    font-family: 'Seymour One', sans-serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Seymour One', sans-serif;
+    color: purple;
+    font-size: 25px;
+}
+
+p {
+    font-size: 18px;
 }
 
 .container {
     text-align: center;
-    margin-top: 110px;
+    margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .container__heading {
-    max-width: 70%;
+    max-width: 90%;
     margin: 0 auto 30px auto;
     display: flex;
     flex-direction: column;
@@ -56,21 +76,36 @@ h1 {
     display: block;
 }
 
-.btn {
+.btn,
+form > input[type=submit] {
     -webkit-appearance: textfield;
     font-size: 18px;
-    color: white;
+    color: yellow;
     background: purple;
+    border: 3px solid purple;
     cursor: pointer;
     padding: 20px;
     width: auto;
     height: auto;
+    margin-bottom: 20px;
 }
 
+btn:hover,
+form > input[type=submit]:hover {
+    background: none;
+    color: blue;
+    border: 3px solid blue;
+}
 
 
 input[type="checkbox"] {
     margin-right: 30px;
+    font-size: 20px;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
 }
 
 input[type="text"],
@@ -85,4 +120,33 @@ input[type="password"]
 select {
     width: 52%;
     font-size: 18px;
+}
+
+.mar-bottom-1 {
+    margin-bottom: 30px;
+}
+
+.error-box {
+    border: 2px dashed red;
+    padding: 10px;
+    max-width: 300px;
+    margin: 30px auto;
+}
+
+.error-box ul {
+    list-style: none;
+}
+
+.error-box p, .error-box li {
+    color: red;
+}
+
+.questions {
+    width: 60%;
+
+    margin: 0 auto 30px auto;
+}
+
+.questions label {
+    text-align: left;
 }

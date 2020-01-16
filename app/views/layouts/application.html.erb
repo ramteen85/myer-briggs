@@ -11,7 +11,10 @@
 
   <body>
     <nav>
-      <h1>Myer Briggs Personality Test</h1>
+      <a href="/" style="text-decoration: none;"><h1 style="color: yellow">Personality Matchmaker</h1></a>
+      <% if session[:user_id] %>
+      <%= button_to "Log Out", login_path, :method => 'delete', :class => "btn", :style => "display: block; margin: 20px auto" %>
+      <% end %>
     </nav>
     <%= yield %>
 

@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="container__heading">
+        <h2>Login to your Account</h2>
+        <p style="text-align: center">Welcome to the personality matchmaker. Please log into your account to continue.</p>
+    </div>
+
+    <% if flash[:error] %>
+        <strong>Invalid username/password<strong>
+    <% end %>
+
+    <div class="form">
+        <%= form_tag login_path do %>
+            <table style="width:100%; margin-bottom: 30px">
+                <tr>
+                    <td>Username:</td>
+                    <td><%= text_field_tag :username %></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><%= password_field_tag :password %></td>
+                </tr>
+            </table>
+            <%= submit_tag 'Login', :class => "btn" %>
+        <% end %>
+    </div>
+    <a href="/register">Don't have an account? Register free here.</a>
+</div>

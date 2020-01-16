@@ -1,0 +1,27 @@
+<div class="container">
+
+	<h2 class="mar-bottom-1">Welcome <%= @user.fullname %></h2>
+
+	<div class="container__heading">
+		<p class="mar-bottom-1">Your Score: <a href="/outcome?personality=<%= @personality %>&you=<%= @user.username %>"><%= @personality %></a></p>
+		<p class="mar-bottom-1">To update your personality score and match you with other users, please take 30 minutes to answer all the questions in the myer-briggs test! After you complete the test for the first time, you will be able to see who you match with and who you dont. Your score updates each time you complete the test. There is no right or wrong answer so take your time.</p>
+
+		<%= button_to "Take Test!", "/test?progress=1", data: { confirm: "Your previous test results will be wiped if you take this test again. Continue?", :class => "btn", :method => "GET" } %>
+	</div>
+
+	<% if @match != nil %>
+	<div class="container-heading">
+		<h2>Your Matches</h2>
+		<br>
+		<!-- generate personality matches if user has score -->
+		<p>Your Personality: <a href="/outcome?personality=<%= @personality %>"><%= @match.personality %></a></p>
+		<br>
+		<p>Your Matches: <a href="/outcome?personality=<%= @match.first_match %>"><%= @match.first_match %></a>, <a href="/outcome?personality=<%= @match.second_match %>"><%= @match.second_match %></a>, <a href="/outcome?personality=<%= @match.third_match %>"><%= @match.third_match %></a> </p>
+		<br>
+		<h2>Info:</h2>
+		<br>
+		<p><%= @match.description %></p>
+		<br><br><br>
+	</div>
+	<% end %>
+</div>

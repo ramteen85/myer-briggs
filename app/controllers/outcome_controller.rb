@@ -1,7 +1,14 @@
 class OutcomeController < ApplicationController
     def results
 
+        @scores = Score.where personality: params['personality']
+        @user = User.find_by username: params[:you]
+
         @description = ""
+
+        if params['personality'] == "Not Completed"
+            @description = "You must complete the personality test before viewing the information on this page."
+        end
 
         if params['personality'] == "ENFP"
             @description = "ENFP individuals are considered to be one of the most varied and adaptable types of characters and are typically referred to as 'inspirers.' As an ENFP grows up, his or her traits may exhibit a power play between the dominant and recessive features. Finding a balance between the intuitive extravert and the sensitive introvert will be an important part of an ENFP being able to decide what they want out of life. The extravert trait ensures that this character is open-minded and enthusiastic yet the intuitive portion of the personality allows the individual to be thoughtful and insightful. This combination can yield an idealistic individual with a lust for life and an appreciation for the feelings and motives of those around them. 'Inspirers' tend to have many interests and often excel in all areas that they really enjoy. They are multi-talented and, to outsiders, seem to be good at everything. This is likely due to this character’s passionate and enthusiastic nature which can be contagious to those around them, hence the nickname 'inspirer.'

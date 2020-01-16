@@ -1,14 +1,24 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root :to => "home#register"
+  get 'scores/new'
+  get 'scores/create'
+  get 'scores/edit'
+  get 'scores/destroy'
+  root :to => "home#index"
 
-  get "/login/" => "home#login"
+  get "/login" => "session#new"
 
+  post "/login" => "session#create" #submit login form / check creds
+
+  delete "/login" => "session#destroy"
+
+  get "/register" => "users#new"
+
+  post "/test/" => "test#questions"
   get "/test/" => "test#questions"
 
   get "/outcome/" => "outcome#results"
 
-  
+  resources :users
 
 end

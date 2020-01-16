@@ -1,9 +1,25 @@
 <div class="container">
-    <h2>Results: <%= params['name'] %></h2>
+    <h2><%= params['personality'] != "Not Completed" ? "About" : "" %> <%= params['personality'] %></h2>
     <br>
-    <p>Your personality: <%= params['personality'] %></p>
-    <br><br>
-    <h2>About <%= params['personality'] %></h2>
-    <br><br>
-    <p style="width: 50%; margin: 30px auto"><%= @description %></p>
+    <p style="width: 90%; margin: 30px auto"><%= @description %></p>
+
+    <% if params['personality'] != "Not Completed" && @scores.count != 0 %>
+        <h2>All <%= params['personality'] %> Users</h2>
+        <br><br>
+
+        <ul style="list-style: none">
+        <% @scores.each do |s| %>
+            
+        <li>Name: <%= User.find_by(id: s.user_id).username %></li>
+        <li>Age: <%= User.find_by(id: s.user_id).age %></li>
+        <li>Country: <%= User.find_by(id: s.user_id).country %></li>
+        <li>State: <%= User.find_by(id: s.user_id).state %></li>
+        <li>City: <%= User.find_by(id: s.user_id).city %></li>
+        <li>-------------------------------------------------</li>
+            
+        <% end %>
+        </ul>
+    <% end %>
+    <br><br><br>
+    <%= button_to "Back Home", "/", :class => "btn", :method => "get"  %>
 </div>
