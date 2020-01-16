@@ -72,8 +72,22 @@ p {
 }
 
 .container label {
-    margin-bottom: 15px;
+    margin-bottom: 0;
     display: block;
+}
+
+input#username,
+input#password {
+    width: 20em;
+    border: none;
+}
+
+
+
+select#user_gender {
+    position: relative;
+    width: 8em;
+    left: 11px;
 }
 
 .btn,
@@ -124,6 +138,10 @@ select {
 
 .mar-bottom-1 {
     margin-bottom: 30px;
+}
+
+.mar-top-1 {
+    margin-top: 30px;
 }
 
 .error-box {
