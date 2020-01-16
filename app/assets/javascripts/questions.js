@@ -1,6 +1,7 @@
 window.onload = () => {
     if(document.getElementById('ans-one')) {
 
+        document.querySelector("#select_answer").disabled = true;
 
         document.getElementById('ans-one').addEventListener('click', () => {
             document.getElementById('ans-two').checked = false;
