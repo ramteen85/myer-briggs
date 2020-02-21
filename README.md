@@ -1,24 +1,20 @@
-# README
+# Credits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This server was developed using ruby on rails, by Ramteen Taheri.
 
-Things you may want to cover:
+A live version is provided at
 
-* Ruby version
+https://personality-matchmaker.herokuapp.com/
 
-* System dependencies
+-------------------------------------------------------
 
-* Configuration
+# Instructions
 
-* Database creation
+To use:
 
-* Database initialization
+1. Register an account
+2. Take the personality test
+3. Your results should be provided on your member's home page with your compatable personality types.
+4. To reset your results, take the test again.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy!
